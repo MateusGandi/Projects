@@ -40,16 +40,27 @@ namespace AgWeb.Controllers
 
         public IActionResult Agendamentos()
         {
+            List<Cliente> prov = new List<Cliente>();
             var agendamentos = _dbContext.Agendamentos.ToList();
-            return View(agendamentos);
-        }
+            if (agendamentos.Count > 0)
+            {
+                return View(agendamentos);
+            }
+            else
+            {
+                prov.Add(new Cliente { Nome = "Olá, bom dia!", Horario = "Nenhum agendamento ainda..." });
+                return View(prov);
+            }
+                
+        }//
+            
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        }//
 
     }
 }

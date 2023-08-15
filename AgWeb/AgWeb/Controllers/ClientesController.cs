@@ -21,12 +21,12 @@ namespace AgWeb.Controllers
                     _dbContext.Agendamentos.Add(cliente);
                     await _dbContext.SaveChangesAsync();
 
-                return RedirectToAction("Index", "Home", new { horario = cliente.Horario, data = cliente.Data, aviso = cliente.Problemas });
+                return RedirectToAction("Index", "Home", new { horario = cliente.Horario, data = cliente.Data });
             }
             catch (Exception ex)
             {
                 // Redirecionar de volta para a página de agendamento com a mensagem de erro
-                return RedirectToAction("Agendar", "Clientes");
+                return RedirectToAction("Index", "Home", new { aviso = "Error" });
             }
 
         }

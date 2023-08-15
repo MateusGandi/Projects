@@ -126,6 +126,10 @@
         margin-top: auto;
         margin-bottom: auto;
     }
+    .aviso{
+        text-align: center;
+        font-size: 16px;
+    }
 </style>
 <div class="div_home_page ag_center">
     <p>Realizar agendamento</p>
@@ -172,17 +176,17 @@
         <p class="logo_frame item"><img src="~/source/symbol_yes.png" /></p>
         <p class="status item">Agendamento realizado com sucesso!</p>
     }
-    else if (!string.IsNullOrEmpty(Context.Request.Query["Horario"].ToString()) && bool.Parse(Context.Request.Query["Aviso"]))
+    else if (Context.Request.Query["aviso"].ToString()== "Error")
     {
         <p class="title_p item">Confirmação do agendamento</p>
-        <p class="data_ag item">Agendamento não pode ser realizado, dados incompletos ou incompatíveis!</p>
+        <p class="data_ag item aviso">Agendamento não pode ser realizado, dados incompletos ou incompatíveis!</p>
         <p class="logo_frame item"><img src="~/source/symbol_att.png" /></p>
         <p class="status item">Agendamento não realizado!</p>
     }
     else
     {
         <p class="title_p item">Confirmação do agendamento</p>
-        <p class="data_ag item">Aguardando inserção dos dados...</p>
+        <p class="data_ag item aviso">Aguardando inserção dos dados...</p>
         <p class="logo_frame item"><img src="~/source/symbol_att.png" /></p>
         <p class="status item">In process</p>
     }

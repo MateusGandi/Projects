@@ -141,12 +141,17 @@
         border-bottom: 3px solid #00A3FF;
     }
 
+    .ttc{
+    text-align: center !important;
+    }
+
 </style>
 <div class="div_home_page ag_center">
     <form asp-controller="Clientes" asp-action="ExcluirAgendamento" method="post">
         <input type="hidden" name="id" value="@First.Id" />
     <div class="item_ag table_">
         <table class="table_view">
+                <tr><td colspan="2" class="ttc">Próximo a ser atendido</td></tr>
                 <tr><td colspan="2" class="tti">@First.Nome</td></tr>
                 <tr><td>Serviço</td><td>@First.Servico</td></tr>
                 <tr><td>Descrição</td><td>@First.Descricao</td></tr>
@@ -154,7 +159,7 @@
         </table>
     </div>
     <div class="button_group_e item_ag">
-        <button class="green"><b>EXIBIR TUDO</b></button>
+            <button class="green" asp-controller="Home" asp-action="Index"><b>AGENDAR OUTRO</b></button>
         <button type="submit" class="blue"><b>MARCAR COMO REALIZADO</b></button>
     </div>
     </form>
