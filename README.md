@@ -3,5 +3,5 @@ For my projects
 
 AGWEB - AGENDAMENTO ONLINE
 ASP.NET E SQLSERVER
-![Texto alternativo](projects/agweb/tela_ag.png)
-![Texto alternativo](projects/agweb/tela_ag_02.png)
+![Exemplo de imagem](https://github.com/MateusGandi/Projects/blob/main/AgWeb/tela_ag.png)
+![Exemplo de imagem](https://github.com/MateusGandi/Projects/blob/main/AgWeb/tela_ag_02.png)
