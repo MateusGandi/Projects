@@ -9,37 +9,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AgWeb
 build_property.RootNamespace = AgWeb
-build_property.ProjectDir = C:\Users\Matheus\source\repos\AgWeb\AgWeb\
+build_property.ProjectDir = C:\Users\Win\Projects\AgWeb\AgWeb\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Matheus\source\repos\AgWeb\AgWeb
+build_property.MSBuildProjectDirectory = C:\Users\Win\Projects\AgWeb\AgWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Matheus/source/repos/AgWeb/AgWeb/Views/Home/Agendar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZ2VuZGFyLmNzaHRtbA==
+[C:/Users/Win/Projects/AgWeb/AgWeb/Views/Home/Agendamentos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZ2VuZGFtZW50b3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus/source/repos/AgWeb/AgWeb/Views/Home/Index.cshtml]
+[C:/Users/Win/Projects/AgWeb/AgWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus/source/repos/AgWeb/AgWeb/Views/Shared/Error.cshtml]
+[C:/Users/Win/Projects/AgWeb/AgWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus/source/repos/AgWeb/AgWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Win/Projects/AgWeb/AgWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus/source/repos/AgWeb/AgWeb/Views/_ViewImports.cshtml]
+[C:/Users/Win/Projects/AgWeb/AgWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus/source/repos/AgWeb/AgWeb/Views/_ViewStart.cshtml]
+[C:/Users/Win/Projects/AgWeb/AgWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus/source/repos/AgWeb/AgWeb/Views/Shared/_Layout.cshtml]
+[C:/Users/Win/Projects/AgWeb/AgWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e8sqnt5tbt

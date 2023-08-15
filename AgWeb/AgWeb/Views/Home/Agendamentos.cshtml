@@ -1,0 +1,180 @@
+﻿@model List<AgWeb.Models.Cliente>
+@{
+    ViewData["Title"] = "Agendamentos";
+    var First = @Model.FirstOrDefault();
+}
+<style>
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .div_home_page, .button_group_e {
+        width: 100%;
+        max-width: 500px;
+        min-height: 500px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content:center;
+    }
+
+    .row_item {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        padding: 10px 10px 0 10px;
+        margin-bottom: 10px;
+    }
+
+    .row_item p {
+        padding: 5px;
+    }
+
+    .item_ag {  
+        height: 300px;
+        padding: 50px;
+    }
+    td{
+        text-align: center;
+    }
+
+    button{
+        margin: 5px;
+        width: 100%;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+    }
+
+    .navbar-toggler {
+        width: 45px;
+    }
+
+    button:hover {
+        opacity: 50%;
+    }
+
+    .ag_center{
+        border-radius: 10px;
+        max-height: 500px;
+        border: 1px solid gray;
+    }
+
+    form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .ag_center form {
+        all: unset;
+        width: 100%;
+        height: 80%;
+        
+    }
+
+    form .title_ag {
+        width: 80%;
+    }
+
+    form .botton_gp {
+        width: 20%;
+        display: flex;
+    }
+    .botton_gp button{
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .botton_gp b{
+            font-size: 11px !important;
+        }
+    .green {
+        background: #00D16D;
+    }
+
+    .blue {
+        background: #00A3FF;
+    }
+    .yellow{
+        background: #FFBB44;
+    }
+    .gray{
+        background: #D1D1D1;
+    }
+    .agg{
+        height: 35px;
+    }
+
+    .div_home_ags{
+        overflow-y: auto;
+        max-height: 500px;
+        min-width: 500px;
+    }
+    .table_view{
+        height: 100%;
+        width: 100%;
+    }
+    .table_{
+        width: 100%;
+    }
+
+        .table_ table tr td:not(.tti) {
+        font-size: 16px;
+        text-align: initial;
+    }
+    .tti{
+        font-size: 25px !important;
+    }
+    .li_from_nav_home {
+        border-bottom: 3px solid #00A3FF;
+    }
+
+</style>
+<div class="div_home_page ag_center">
+    <form asp-controller="Clientes" asp-action="ExcluirAgendamento" method="post">
+        <input type="hidden" name="id" value="@First.Id" />
+    <div class="item_ag table_">
+        <table class="table_view">
+                <tr><td colspan="2" class="tti">@First.Nome</td></tr>
+                <tr><td>Serviço</td><td>@First.Servico</td></tr>
+                <tr><td>Descrição</td><td>@First.Descricao</td></tr>
+                <tr><td colspan="2" class="tti">@First.Horario @First.Data</td></tr>
+        </table>
+    </div>
+    <div class="button_group_e item_ag">
+        <button class="green"><b>EXIBIR TUDO</b></button>
+        <button type="submit" class="blue"><b>MARCAR COMO REALIZADO</b></button>
+    </div>
+    </form>
+</div>
+<div class="div_home_page teste div_home_ags">
+    @foreach (var agendamento in Model)
+    {
+        if (agendamento.Id != First.Id)
+        {
+            <div class="row_item">
+                <form asp-controller="Clientes" asp-action="ExcluirAgendamento" method="post">
+                    <input type="hidden" name="id" value="@agendamento.Id" />
+                    <p class="title_ag">@agendamento.Horario - @agendamento.Nome<br>@agendamento.Servico</p>
+                    <p class="botton_gp"><button class="yellow agg" type="submit"><b>CANCELAR</b></button></p>
+                </form>
+            </div>
+        }
+
+        
+    }
+
+    
+</div>

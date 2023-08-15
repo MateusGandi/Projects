@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matheus\\source\\repos\\AgWeb\\AgWeb\\AgWeb.csproj": {}
+    "C:\\Users\\Win\\Projects\\AgWeb\\AgWeb\\AgWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matheus\\source\\repos\\AgWeb\\AgWeb\\AgWeb.csproj": {
+    "C:\\Users\\Win\\Projects\\AgWeb\\AgWeb\\AgWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus\\source\\repos\\AgWeb\\AgWeb\\AgWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Win\\Projects\\AgWeb\\AgWeb\\AgWeb.csproj",
         "projectName": "AgWeb",
-        "projectPath": "C:\\Users\\Matheus\\source\\repos\\AgWeb\\AgWeb\\AgWeb.csproj",
-        "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus\\source\\repos\\AgWeb\\AgWeb\\obj\\",
+        "projectPath": "C:\\Users\\Win\\Projects\\AgWeb\\AgWeb\\AgWeb.csproj",
+        "packagesPath": "C:\\Users\\Win\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Win\\Projects\\AgWeb\\AgWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Win\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +40,18 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
