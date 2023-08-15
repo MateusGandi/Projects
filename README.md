@@ -7,5 +7,5 @@ ASP.NET E SQLSERVER<br>
 ![Exemplo de imagem](https://github.com/MateusGandi/Projects/blob/main/AgWeb/tela_ag_02.png)<br>
 
 Executar os código abaixo para gerar banco de dados no gerenciador de pacotes!<br>
-InitialCreate<br>
+<b>InitialCreate<br>
 Update-Database
