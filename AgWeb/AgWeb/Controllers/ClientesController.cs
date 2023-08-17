@@ -1,4 +1,5 @@
 ﻿using AgWeb.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using System.Threading.Tasks;
@@ -18,7 +19,11 @@ namespace AgWeb.Controllers
         {
             try
             {
-                    _dbContext.Agendamentos.Add(cliente);
+                DateTime dataConvertida = DateTime.Parse(cliente.Data);
+                cliente.Data = dataConvertida.ToString("dd/MM/yyyy");
+
+
+                _dbContext.Agendamentos.Add(cliente);
                     await _dbContext.SaveChangesAsync();
 
                 return RedirectToAction("Index", "Home", new { horario = cliente.Horario, data = cliente.Data });

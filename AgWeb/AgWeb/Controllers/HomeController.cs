@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace AgWeb.Controllers
@@ -41,7 +42,11 @@ namespace AgWeb.Controllers
         public IActionResult Agendamentos()
         {
             List<Cliente> prov = new List<Cliente>();
-            var agendamentos = _dbContext.Agendamentos.ToList();
+            var agendamentos = _dbContext.Agendamentos
+                .OrderBy(a => a.Data)//campo e relação
+                .ThenBy(a => a.Horario)
+            .ToList();
+
             if (agendamentos.Count > 0)
             {
                 return View(agendamentos);
